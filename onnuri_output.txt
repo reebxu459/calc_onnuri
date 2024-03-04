@@ -1,0 +1,41 @@
+rebbi committed the crime: split teok with rosanne. split 2 half chickens with austin kelly rosanne eric nick. 
+        amount owed: $21.96
+
+rosanne committed the crime: split teok with rebbi. split 2 half chickens with austin kelly rebbi eric nick. 
+        amount owed: $21.96
+
+eric committed the crime: split 2 half chickens with austin kelly rebbi rosanne nick. 
+        amount owed: $10.93
+
+nick committed the crime: split 2 half chickens with austin kelly rebbi rosanne eric. 
+        amount owed: $10.93
+
+austin committed the crime: covered the kimchijeon. split 2 half chickens with nick kelly rebbi rosanne eric. 
+        amount owed: $33.0
+
+kelly committed the crime: split 2 half chickens with austin eric rebbi rosanne nick. 
+        amount owed: $10.93
+
+becky committed the crime: split a whole chicken with steven and cynthia. 
+        amount owed: $15.69
+
+steven committed the crime: split a whole chicken with becky and cynthia. 
+        amount owed: $15.69
+
+cynthia committed the crime: split a whole chicken with steven and becky. 
+        amount owed: $15.69
+
+daniel committed the crime: ordered kimchi fried rice. 
+        amount owed: $19.58
+
+bryan committed the crime: ordered yaki udon. 
+        amount owed: $22.18
+
+meilin committed the crime: ordered soon tofu stew. 
+        amount owed: $20.88
+
+felix committed the crime: ordered bibimbap. 
+        amount owed: $22.18
+
+sum of above totals: 241.6
+how much rebbi paid: 241.58
