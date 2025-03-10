@@ -1,86 +1,52 @@
 # list of all the hoomans
 hoomans = [
     {
-        'name': 'rebbi', 
-        'desc': 'split teok with rosanne. split 2 half chickens with austin kelly rosanne eric nick', 
-        'base price': (16.99 / 2) + ((2 * 21.99) / 6)
+        'name': 'Rebbi', 
+        'desc': 'pho no. 17 + shared spring rolls', 
+        'base price': 17.95 + 4.475
     },
-    {
-        'name': 'rosanne', 
-        'desc': 'split teok with rebbi. split 2 half chickens with austin kelly rebbi eric nick', 
-        'base price': (16.99 / 2) + ((2 * 21.99) / 6)
+        {
+        'name': 'Kelly', 
+        'desc': 'vermicelli + shared spring rolls', 
+        'base price': 19.95 + 4.475
     },
-    {
-        'name': 'eric', 
-        'desc': 'split 2 half chickens with austin kelly rebbi rosanne nick', 
-        'base price': (2 * 21.99) / 6
+        {
+        'name': 'Carolyn', 
+        'desc': 'pho no. 18', 
+        'base price': 17.95
     },
-    {
-        'name': 'nick', 
-        'desc': 'split 2 half chickens with austin kelly rebbi rosanne eric', 
-        'base price': (2 * 21.99) / 6
+        {
+        'name': 'Sophia', 
+        'desc': 'pho no. 17', 
+        'base price': 17.95
     },
-    {
-        'name': 'austin', 
-        'desc': 'covered the kimchijeon. split 2 half chickens with nick kelly rebbi rosanne eric', 
-        'base price': 16.99 + (2 * 21.99) / 6
-    },
-    {
-        'name': 'kelly', 
-        'desc': 'split 2 half chickens with austin eric rebbi rosanne nick', 
-        'base price': (2 * 21.99) / 6
-    },
-    {
-        'name': 'becky', 
-        'desc': 'split a whole chicken with steven and cynthia', 
-        'base price': 32.99 / 3
-    },
-    {
-        'name': 'steven', 
-        'desc': 'split a whole chicken with becky and cynthia', 
-        'base price': 32.99 / 3
-    },
-    {
-        'name': 'cynthia', 
-        'desc': 'split a whole chicken with steven and becky', 
-        'base price': 32.99 / 3
-    },
-    {
-        'name': 'daniel', 
-        'desc': 'ordered kimchi fried rice', 
-        'base price': 13.99
-    },
-    {
-        'name': 'bryan', 
-        'desc': 'ordered yaki udon', 
-        'base price': 15.99
-    },
-    {
-        'name': 'meilin', 
-        'desc': 'ordered soon tofu stew', 
-        'base price': 14.99
-    },
-    {
-        'name': 'felix', 
-        'desc': 'ordered bibimbap', 
-        'base price': 15.99
+        {
+        'name': 'Emma', 
+        'desc': 'pho no. 17', 
+        'base price': 17.95
     },
 ]
 
-# apply tip, tax, and amount to base price to cover andrew's food
+TIP = 1.08
+PAYER = 'Carolyn'
+SANITY_CHECK_TARGET = 122.89
+
+# apply tip and tax to base price
 def calculate_payment(base_price: float) -> float:
     tax = 1.13
-    tip = 1.15
-    pay_for_andrew = 1.40
-    return base_price * tip * tax + pay_for_andrew
+    tip = TIP
+    return base_price * tip * tax
 
 
 if __name__ == '__main__':
     sanity_check = 0
-    sanity_check_target = 241.58
+    sanity_check_target = SANITY_CHECK_TARGET
     for hooman in hoomans:
-        print(hooman['name'] , 'committed the crime: ' + hooman['desc'] + '. \n\t' + 'amount owed: $' + str(round(calculate_payment(hooman['base price']), 2)) + '\n')
+        print(
+            hooman['name'] , 'committed the crime: ' + 
+            hooman['desc'] + '. \n\t' + 'amount owed: $' + str(round(calculate_payment(hooman['base price']), 2)) + '\n'
+            )
         sanity_check += calculate_payment(hooman['base price'])
     
     print("sum of above totals: " + str(round(sanity_check, 2)))
-    print("how much rebbi paid: " + str(sanity_check_target))
+    print(f"how much {PAYER} paid: " + str(sanity_check_target))
